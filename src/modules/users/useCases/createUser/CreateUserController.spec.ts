@@ -18,8 +18,8 @@ describe("Create User Controller", () => {
 
   it("should be able to create a new user", async () => {
     const response = await request(app).post('/api/v1/users').send({
-      name: "John Doe",
-      email: "john@example.com",
+      name: "New User",
+      email: "new@user.com",
       password: "123456"
     })
 
@@ -28,8 +28,8 @@ describe("Create User Controller", () => {
 
   it("should not be able to create a user with the same email", async () => {
     const response = await request(app).post('/api/v1/users').send({
-      name: "John Doe",
-      email: "john@example.com",
+      name: "New User Doe",
+      email: "new@user.com",
       password: "123456"
     })
 
